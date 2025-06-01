@@ -141,7 +141,7 @@ namespace Sigma.API.Controllers
         /// <param name="dto">Dados atualizados do projeto.</param>
         /// <returns>Resposta sem conteúdo.</returns>
         [Authorize]
-        [HttpPut("{id}")]
+        [HttpPut("editar/{id}")]
         public async Task<IActionResult> Alterar(long id, [FromBody] ProjetoEditarDto dto)
         {
             await _projetoService.Alterar(id, dto);
